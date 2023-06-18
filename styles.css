@@ -1,0 +1,23 @@
+.topRow {
+    display: flex;
+}
+
+.btn {
+    height: 50px;
+    width: 50px;
+}
+
+.btnOp{
+    height: 50px;
+    width: 50px;
+}
+
+/* #display {
+    background-color: red;
+    height: 50px;
+}
+
+#lastDisplay {
+    background-color: blue;
+    height: 50px;
+} */
