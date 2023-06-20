@@ -11,9 +11,12 @@ body {
 
 .topRow {
     display: flex;
+    height: 100%;
 }
 
 #display {
+    display: flex;
+    flex: 50;
     background-color: rgb(177, 177, 177);
     height: 50px;
     width: 100%;
@@ -21,6 +24,7 @@ body {
 }
 
 #lastDisplay {
+    display: flex;
     background-color: gray;
     height: 50px;
     width: 100%;
@@ -28,9 +32,16 @@ body {
 }
 
 #clear, #backspace {
+    background-color: rgb(241, 241, 241);
+    border: 1px solid black;
+    display: flex;
+    flex: 1 0 auto;
+    flex-shrink: 1;
+    justify-content: center;
+    align-items: center;
     font-size: 32px;
     font-weight: 700;
-    width: 25%;
+    width: 20%;
 }
 
 .btnContainer {
@@ -42,20 +53,24 @@ body {
 .btnRow1, .btnRow2, .btnRow3, .btnRow4 {
     display: flex;
     flex: 1;
+    height: 100%;
 }
 
 .btn {
     background-color: rgb(241, 241, 241);
     flex: 1;
     height: 100px;
+    width: 100px;
     font-size: 32px;
 }
 
 .btnOp{
    flex: 1;
-   background-color: rgb(247, 194, 95)
+   background-color: rgb(247, 194, 95);
+   font-size: 32px;
 }
 
 #equals {
     background-color: rgb(241, 163, 18);
+    font-size: 32px;
 }

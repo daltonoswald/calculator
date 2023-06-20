@@ -21,6 +21,7 @@ decimalBtn.addEventListener('click', decimalPoint);
 
 numberBtn.forEach((button) => {
     button.addEventListener('click', () => {
+        if (display.textContent !== "") clear();
         let firstNumber = display.textContent += button.value;
     })
 })
@@ -47,7 +48,7 @@ function setOperator(operator) {
 }
 
 function evaluate() {
-    if (currentOperation === '/' && display.textContent === '0' || display.textContent === '0.') {
+    if (currentOperation === '/' && (display.textContent === '0' || display.textContent === '0.')) {
         alert("You cannot divide by 0! Clearing calculator!");
         clear();
         return;
