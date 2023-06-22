@@ -16,18 +16,24 @@ body {
 
 #display {
     display: flex;
-    flex: 50;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+    align-items: center;
     background-color: rgb(177, 177, 177);
     height: 50px;
-    width: 100%;
-    font-size: 32px;
+    width: 60%;
+    max-width: 60%;
+    overflow: hidden;
+    font-size: 2em;
 }
 
 #lastDisplay {
     display: flex;
+    align-items: center;
     background-color: gray;
     height: 50px;
     width: 100%;
+    overflow: hidden;
     font-size: 32px;
 }
 

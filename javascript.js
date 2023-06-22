@@ -21,7 +21,6 @@ decimalBtn.addEventListener('click', decimalPoint);
 
 numberBtn.forEach((button) => {
     button.addEventListener('click', () => {
-        if (display.textContent !== "") clear();
         let firstNumber = display.textContent += button.value;
     })
 })
