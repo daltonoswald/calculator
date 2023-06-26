@@ -20,21 +20,24 @@ body {
     flex: 0 1 auto;
     align-items: center;
     background-color: rgb(177, 177, 177);
-    height: 50px;
+    min-height: 50px;
+    height: auto;
     width: 60%;
     max-width: 60%;
-    overflow: hidden;
     font-size: 2em;
+    overflow-wrap: anywhere;
 }
 
 #lastDisplay {
     display: flex;
     align-items: center;
     background-color: gray;
-    height: 50px;
+    min-height: 50px;
+    height: auto;
     width: 100%;
     overflow: hidden;
-    font-size: 32px;
+    font-size: 2em;
+    overflow-wrap: anywhere;
 }
 
 #clear, #backspace {
@@ -45,9 +48,14 @@ body {
     flex-shrink: 1;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
+    font-size: 1.5em;
     font-weight: 700;
     width: 20%;
+    overflow-wrap: anywhere;
+}
+
+#clear:hover, #backspace:hover {
+    opacity: 0.75;
 }
 
 .btnContainer {
@@ -59,7 +67,7 @@ body {
 .btnRow1, .btnRow2, .btnRow3, .btnRow4 {
     display: flex;
     flex: 1;
-    height: 100%;
+    height: auto;
 }
 
 .btn {
@@ -70,10 +78,18 @@ body {
     font-size: 32px;
 }
 
+.btn:hover {
+    opacity: 0.75;
+}
+
 .btnOp{
    flex: 1;
    background-color: rgb(247, 194, 95);
    font-size: 32px;
+}
+
+.btnOp:hover {
+    opacity: 0.75;
 }
 
 #equals {
