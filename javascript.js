@@ -18,9 +18,11 @@ clearBtn.addEventListener('click', clear);
 equals.addEventListener('click', evaluate);
 backspace.addEventListener('click', back);
 decimalBtn.addEventListener('click', decimalPoint);
+window.addEventListener('keydown', keyInput);
 
 numberBtn.forEach((button) => {
     button.addEventListener('click', () => {
+        if (lastDisplay.textContent.includes("=")) clear();
         let firstNumber = display.textContent += button.value;
     })
 })
@@ -28,6 +30,16 @@ numberBtn.forEach((button) => {
 operatorBtn.forEach((button) =>
 button.addEventListener('click', () => setOperator(button.textContent))
 );
+
+function keyInput(e) {
+    if (e.key === '.') decimalPoint();
+    if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/') setOperator(e.key);
+    if (e.key === 'Backspace' || e.key === 'Delete') back();
+    if (e.key === 'Escape') clear();
+    if (lastDisplay.textContent.includes("=")) clear();
+    if (e.key >= 0 && e.key <= 9) display.textContent += e.key;
+    if (e.key === '='|| e.key === 'Enter') evaluate();
+}
 
 function decimalPoint() {
     if (display.textContent === '') 
