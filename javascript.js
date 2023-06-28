@@ -32,6 +32,7 @@ button.addEventListener('click', () => setOperator(button.textContent))
 );
 
 function keyInput(e) {
+    e.preventDefault();
     if (e.key === '.') decimalPoint();
     if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/') setOperator(e.key);
     if (e.key === 'Backspace' || e.key === 'Delete') back();
